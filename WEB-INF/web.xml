@@ -1,0 +1,26 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version= "2.5">
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/mysql</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+
+  <servlet>
+    <servlet-name>memberServlet</servlet-name>
+    <servlet-class>join.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>memberServlet</servlet-name>
+    <url-pattern>/join/member</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>boardServlet</servlet-name>
+    <servlet-class>BoardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>boardServlet</servlet-name>
+    <url-pattern>/board</url-pattern>
+  </servlet-mapping>
+</web-app>
